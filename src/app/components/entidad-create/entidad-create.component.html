@@ -1,0 +1,28 @@
+<h2>Crear Nueva Entidad</h2>
+
+<form (ngSubmit)="guardarEntidad()" #entidadForm="ngForm">
+  <div>
+    <label for="nit">NIT:</label>
+    <input
+      type="text"
+      id="nit"
+      name="nit"
+      [(ngModel)]="entidad.nit"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      [(ngModel)]="entidad.nombre"
+      required
+    />
+  </div>
+
+  <button type="submit" [disabled]="!entidadForm.form.valid">Guardar</button>
+</form>
+
